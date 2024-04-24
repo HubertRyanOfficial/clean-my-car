@@ -12,27 +12,26 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { loginSchema } from "@/lib/schema";
+import { forgotPasswordSchema } from "@/lib/schema";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "./ui/use-toast";
 
-export default function LoginForm() {
+export default function ForgotPasswordForm() {
   const { toast } = useToast();
   const navigate = useNavigate();
 
-  const form = useForm<z.infer<typeof loginSchema>>({
-    resolver: zodResolver(loginSchema),
+  const form = useForm<z.infer<typeof forgotPasswordSchema>>({
+    resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
       email: "",
-      password: "",
     },
   });
 
-  async function onSubmit(values: z.infer<typeof loginSchema>) {
-    navigate("/user");
+  async function onSubmit(values: z.infer<typeof forgotPasswordSchema>) {
+    navigate("/");
     toast({
-      title: "Success!",
-      description: `Logged as: ${values.email}`,
+      title: "Email sent!",
+      description: `Recovery your password checking the link in your e-mail.`,
     });
   }
   return (
@@ -59,38 +58,11 @@ export default function LoginForm() {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input
-                  className="rounded-sm p-4 placeholder:text-gray"
-                  type="password"
-                  placeholder="Password"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <div className="flex justify-end">
-          <span
-            role="button"
-            onClick={() => navigate("/recovery")}
-            className="text-xs text-black cursor-pointer"
-          >
-            fogort your password?
-          </span>
-        </div>
         <Button
           className="w-full bg-magnata text-black hover:text-white my-8 rounded-sm"
           type="submit"
         >
-          Log in
+          Send recovery e-mail
         </Button>
       </form>
     </Form>
