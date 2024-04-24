@@ -1,6 +1,6 @@
 # Clean My Card (Occupop)
 
-This README provides detailed instructions on how to install, configure, and run a React application using Vite. It also includes steps to run unit tests using the `npm run test` command. Be sure to follow all the steps carefully.
+This README provides detailed instructions on how to install, configure, and run a React application using Vite.
 
 ## Prerequisites
 
