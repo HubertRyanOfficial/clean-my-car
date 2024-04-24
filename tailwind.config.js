@@ -12,6 +12,11 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        magnata: {
+          DEFAULT: "#1becb4",
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
