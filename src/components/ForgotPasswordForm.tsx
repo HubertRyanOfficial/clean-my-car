@@ -27,7 +27,7 @@ export default function ForgotPasswordForm() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof forgotPasswordSchema>) {
+  async function onSubmit() {
     navigate("/");
     toast({
       title: "Email sent!",
