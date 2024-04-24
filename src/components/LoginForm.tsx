@@ -77,7 +77,7 @@ export default function LoginForm() {
             </FormItem>
           )}
         />
-        <div className="flex justify-end">
+        <div className="flex justify-end ">
           <span
             role="button"
             onClick={() => navigate("/recovery")}
@@ -86,12 +86,14 @@ export default function LoginForm() {
             fogort your password?
           </span>
         </div>
-        <Button
-          className="w-full bg-magnata text-black hover:text-white my-8 rounded-sm"
-          type="submit"
-        >
-          Log in
-        </Button>
+        <div className="mt-12">
+          <Button
+            className="w-full bg-magnata text-black hover:text-white my-8 rounded-sm"
+            type="submit"
+          >
+            Log in
+          </Button>
+        </div>
       </form>
     </Form>
   );
