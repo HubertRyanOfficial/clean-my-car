@@ -15,7 +15,7 @@ Before getting started, ensure that the following software is installed on your 
 
    ```bash
    git clone https://github.com/HubertRyanOfficial/clean-my-car.git
-   cd fazpay-react-app
+   cd clean-my-car
    ```
 
 2. **Install Dependencies:**
